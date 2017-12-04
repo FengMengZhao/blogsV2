@@ -1,40 +1,44 @@
 ---
 layout: splash
+canvas: true
 header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/mm-home-page-feature.jpg
-  cta_label: "<i class='fa fa-download'></i> Install Now"
-  cta_url: "/docs/quick-start-guide/"
-  caption:
-excerpt: 'A flexible two-column Jekyll theme. Perfect for personal sites, blogs, and portfolios hosted on GitHub or your own server.<br /> <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.7.1">Latest release v4.7.1</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
-feature_row:
-  - image_path: /assets/images/mm-customizable-feature.png
-    alt: "customizable"
-    title: "Super Customizable"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: "/docs/configuration/"
-    btn_class: "btn--primary"
-    btn_label: "Learn More"
-  - image_path: /assets/images/mm-responsive-feature.png
-    alt: "fully responsive"
-    title: "Responsive Layouts"
-    excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
-    url: "/docs/layouts/"
-    btn_class: "btn--primary"
-    btn_label: "Learn More"
-  - image_path: /assets/images/mm-free-feature.png
-    alt: "100% free"
-    title: "100% Free"
-    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
-    url: "/docs/license/"
-    btn_class: "btn--primary"
-    btn_label: "Learn More"
-github:
-  - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
-intro:
-  - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fa fa-twitter"></i> @mmistakes](https://twitter.com/mmistakes){: .btn .btn--twitter} [<i class="fa fa-paypal"></i> Tip Me](https://www.paypal.me/mmistakes){: .btn .btn--primary}'
 ---
 
-{% include feature_row id="intro" type="center" %}
+<img src="/assets/images/steps_forward.jpg" style="display:block;margin: 0 auto">
 
-{% include feature_row %}
+<script>  
+    var ctx = document.querySelector("canvas").getContext("2d"),
+    dashLen = 220, dashOffset = dashLen, speed = 10,
+    txt = "《冯兄上书志》　逢人只说三分话，胸无点墨不可欺；化作文字纸上来，吉言句句皆斟酌。　　　　－冯兄　", x = 30, i = 0;
+
+    ctx.font = "42px STXingkai, LiSu, Microsoft YaHei"; 
+    ctx.lineWidth = 0; ctx.lineJoin = "miter"; ctx.globalAlpha = 2/3;
+    ctx.strokeStyle = "#505050";
+    ctx.fillStyle = "black";
+
+    function loop() {
+      ctx.clearRect(x, 25 + Math.floor(i / 8) * 60, 150, 60);
+      ctx.setLineDash([dashLen - dashOffset, dashOffset - speed]); // create a long dash mask
+      dashOffset -= speed;                                         // reduce dash length
+      ctx.strokeText(txt[i], x, 75 + Math.floor(i / 8) * 60);                               // stroke letter
+
+      if (dashOffset > 0) requestAnimationFrame(loop);             // animate
+      else {
+        ctx.fillText(txt[i], x, 75 + Math.floor(i / 8) * 60);                               // fill final letter
+        dashOffset = dashLen;                                      // prep next char
+        i++;
+        if( i % 8 == 0 ){
+            x = 30
+        }else{
+            x += ctx.measureText(txt[i]).width + ctx.lineWidth * Math.random();
+        }
+        //ctx.setTransform(1, 0, 0, 1, 0, 3 * Math.random());        // random y-delta
+        //ctx.rotate(Math.random() * 0.005);                         // random rotation
+        if (i < txt.length) requestAnimationFrame(loop);
+      }
+    };
+    
+    window.onload = loop;
+</script> 

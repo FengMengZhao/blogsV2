@@ -11,7 +11,7 @@ minimal_mistakes_skin    : "aqua" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "zh-CN"
-title                    : "冯兄「博客」"
+title                    : "冯兄话吉"
 title_separator          : "·"
 name                     : &name "冯兄"
 description              : "冯兄话吉·技术博客"
