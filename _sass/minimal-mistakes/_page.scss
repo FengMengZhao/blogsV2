@@ -64,7 +64,7 @@
 
 .page__lead {
   font-family: $global-font-family;
-  font-size: $type-size-4;
+  font-size: $type-size-3;
 }
 
 .page__content {
@@ -74,8 +74,9 @@
     border-bottom: 1px solid $border-color;
   }
 
+  /* fmz modified */
   p, li, dl {
-    font-size: 1em;
+    font-size: 16px;
   }
 
   /* paragraph indents */

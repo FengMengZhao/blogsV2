@@ -20,21 +20,20 @@ foo:
 
 # main links
 main:
-    #- title: "Quick-Start Guide"
-    #url: /docs/quick-start-guide/
-    #- title: "Search"
-    #url: /search/
-    #- title: "About"
-    #url: /about/
-    #- title: "Newest Posts"
-    #url: /new/
-    #- title: "Sample Posts"
-    #url: /year-archive/
-    #- title: "Sample Collections"
-    #url: /collection-archive/
-    #- title: "Terms &amp; Privacy Policy"
-    #url: /terms/
-
+  - title: "上书"
+    url: /docs/quick-start-guide/
+  - title: "博文"
+    url: /new/
+  - title: "步依步饶"
+    url: /steps/
+  - title: "归档"
+    url: /collection-archive/
+  - title: "搜索"
+    url: /search/
+  - title: "关于冯兄"
+    url: /about/
+  #- title: "Terms &amp; Privacy Policy"
+  #  url: /terms/
 
 # documentation links
 docs:

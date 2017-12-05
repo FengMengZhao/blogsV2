@@ -36,6 +36,7 @@
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
       <!--
+      fmz modified
       <h1 class="page__title" itemprop="headline">
         {% if paginator and site.paginate_show_page_num %}
           {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
@@ -54,6 +55,7 @@
         <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large">{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
       {% endif %}
       {% if page.canvas %}
+      <!-- fmz modified -->
       <div align:"center" >
         <canvas style="margin:0 auto;display:block;" width=400 height=400 ></canvas>
       </div>

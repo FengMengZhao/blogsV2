@@ -1,8 +1,9 @@
 ---
 title: Spring Batch学习
 layout: single
-category: spring java
-tags: framework springbatch
+category: 日记
+tags: 框架 Spring框架
+toc: true
 ---
 
 **Spring Batch**是一个用来开发*批处理*企业级程序的轻量级框架。
