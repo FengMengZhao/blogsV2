@@ -14,41 +14,40 @@ locale                   : "zh-CN"
 title                    : "冯兄话吉"
 title_separator          : "·"
 name                     : &name "冯兄"
-description              : "冯兄话吉·载文传享"
+description              : "格物致知|不可私藏|冯兄话吉|载文传享"
 url                      : &url "https://fengmengzhao.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 github: [metadata]
 repository               : "FengMengZhao/fengmengzhao.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/placeholder.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/placeholder.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 #breadcrumbs             : # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : disqus # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "staticman_v2"
   disqus:
-    shortname            : fengmengzhao # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
+  facebook: 
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
 staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment."
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
+  allowedFields          : ['name', 'email', 'url', 'message']
+  branch                 : "master"
+  commitMessage          : "New comment."
+  filename               : comment-{@timestamp}
+  format                 : "yaml"
+  moderation             : true
+  path                   : "/_data/comments/{options.slug}"
+  requiredFields         : ['name', 'email', 'message']
   transforms:
-    email                : # "md5"
+    email                : "md5"
   generatedFields:
     date:
-      type               : # "date"
+      type               : "date"
       options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+        format           : "iso8601"
 reCaptcha:
   siteKey                :
   secret                 :
@@ -312,13 +311,13 @@ defaults:
       layout: single
       author_profile: true
       share: false
-      comment: true
+      comments: true
   # _articles
   - scope:
       path: ""
       type: articles
     values:
-      layout: splash
-      author_profile: false
+      layout: single
+      author_profile: true
       share: false
-      comment: true
+      comments: true
