@@ -21,7 +21,7 @@ foo:
 # main links
 main:
   - title: "上书"
-    url: /docs/quick-start-guide/
+    url: /articles/
   - title: "博文"
     url: /new/
   - title: "步依步饶"

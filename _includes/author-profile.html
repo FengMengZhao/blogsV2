@@ -17,14 +17,14 @@
   {% endif %}
 
   <div class="author__content">
-    <h3 visibility: hidden class="author__name" itemprop="name">{{ author.name }}</h3>
+    <h3 visibility: hidden class="author__name" itemprop="name">{{ author.name }}</h3> 
     {% if author.bio %}
       <p class="author__bio" itemprop="description">
         {{ author.bio }}
       </p>
     {% endif %}
   </div>
-
+ 
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
     <ul class="author__urls social-icons">
@@ -214,7 +214,7 @@
       {% if author.weibo %}
         <li>
           <a href="https://www.weibo.com/{{ author.weibo }}" itemprop="sameAs">
-            <i class="fa fa-fw fa-weibo" aria-hidden="true"></i> Weibo
+            <i class="fa fa-fw fa-weibo" aria-hidden="true"></i>微博
           </a>
         </li>
       {% endif %}
@@ -246,4 +246,6 @@
       {% include author-profile-custom-links.html %}
     </ul>
   </div>
+  <!-- fmz modified -->
+  <img src="/assets/images/steps_forward.jpg" style="width:150px;height:150px;display:block;">
 </div>

@@ -14,7 +14,7 @@ locale                   : "zh-CN"
 title                    : "冯兄话吉"
 title_separator          : "·"
 name                     : &name "冯兄"
-description              : "冯兄话吉·技术博客"
+description              : "冯兄话吉·载文传享"
 url                      : &url "https://fengmengzhao.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 github: [metadata]
@@ -91,7 +91,7 @@ baidu_analyze: a66e23d778dbfa813dcc8e5ad7b661ec
 author:
   name             : *name
   avatar           : "/assets/images/user.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "专注上品|分享所思"
+  bio              : "格物致知 不可私藏<br>冯兄话吉 载文传享"
   location         : "中国·北京"
   email            : "fengmengzhao@gmail.com"
   uri              : *url #"https://fengmengzhao.github.io"
@@ -258,7 +258,9 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-
+  articles:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -300,7 +302,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
+      share: false
       comments: true
   # _pets
   - scope:
@@ -309,13 +311,14 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
+      share: false
       comment: true
-  # _portfolio
+  # _articles
   - scope:
       path: ""
-      type: portfolio
+      type: articles
     values:
       layout: splash
       author_profile: false
-      share: true
+      share: false
+      comment: true
