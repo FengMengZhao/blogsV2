@@ -19,7 +19,7 @@ url                      : &url "https://fengmengzhao.github.io" # the base host
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 github: [metadata]
 repository               : "FengMengZhao/fengmengzhao.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/placeholder.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 #breadcrumbs             : # true, false (default)
 words_per_minute         : 200
 comments:
