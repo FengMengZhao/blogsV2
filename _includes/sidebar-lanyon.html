@@ -1,0 +1,41 @@
+<!-- Target for toggling the sidebar-lanyon `.sidebar-lanyon-checkbox` is for regular
+     styles, `#sidebar-lanyon-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-lanyon-checkbox" id="sidebar-lanyon-checkbox">
+
+<!-- Toggleable sidebar-lanyon -->
+<div class="sidebar-lanyon" id="sidebar-lanyon">
+  <div class="sidebar-lanyon-item">
+    <p>{{ site.description }}</p>
+  </div>
+
+  <nav class="sidebar-lanyon-nav">
+    <a class="sidebar-lanyon-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">首页</a>
+
+    {% comment %}
+      The code below dynamically generates a sidebar-lanyon nav of pages with
+      `layout: page` in the front-matter. See readme for usage.
+    {% endcomment %}
+
+    {% assign pages_list = site.pages | sort:"url" %}
+    {% for node in pages_list %}
+      {% if node.title != null %}
+        {% if node.layout == "page" %}
+          <a class="sidebar-lanyon-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    <a class="sidebar-lanyon-nav-item" href="/articles/">冯兄『上书』</a>
+    <a class="sidebar-lanyon-nav-item" href="/new/">冯兄『博文』</a>
+    <a class="sidebar-lanyon-nav-item" href="/about/">冯兄『其人』</a>
+    <a class="sidebar-lanyon-nav-item" href="/">步依步饶</a>
+  </nav>
+
+  <div class="sidebar-lanyon-item">
+    <p>
+        <br />
+        <br />
+    </p>
+    <img style="width:150px;height:150px"src="/assets/images/steps_forward.jpg">
+  </div>
+</div>
