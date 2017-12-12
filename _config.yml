@@ -14,7 +14,7 @@ locale                   : "zh-CN"
 title                    : "冯兄话吉"
 title_separator          : "·"
 name                     : &name "冯兄"
-description              : "格物致知|不可私藏|冯兄话吉|载文传享"
+description              : &description "『格物致知，不可私藏<br>&nbsp;&nbsp;冯兄话吉，载文传享』"
 url                      : &url "https://fengmengzhao.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 github: [metadata]
@@ -90,7 +90,7 @@ baidu_analyze: a66e23d778dbfa813dcc8e5ad7b661ec
 author:
   name             : *name
   avatar           : "/assets/images/user.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "格物致知 不可私藏<br>冯兄话吉 载文传享"
+  bio              : *description
   location         : "中国·北京"
   email            : "fengmengzhao@gmail.com"
   uri              : *url #"https://fengmengzhao.github.io"
