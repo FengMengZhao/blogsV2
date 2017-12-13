@@ -6,6 +6,7 @@ header:
   teaser: /assets/images/articles/learn-how-to-learn-is-most-important-for-programmars.jpg
 author_profile: false
 category: 译文
+last_modified_at: 2017-11-23
 ---
 
 成为一个有效的学习者比成为一个有效开发者至少同样重要。
