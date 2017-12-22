@@ -89,7 +89,7 @@ baidu_analyze: a66e23d778dbfa813dcc8e5ad7b661ec
 # Site Author
 author:
   name             : *name
-  avatar           : "/assets/images/user.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : #"/assets/images/user.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : *description
   location         : "中国·北京"
   email            : "fengmengzhao@gmail.com"
