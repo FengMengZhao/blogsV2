@@ -40,6 +40,10 @@ Progressive Web App最大的一个优点在于它的可靠性。在后台增加�
 
 静态网站生成器或者静态网站引擎把动态的内容和数据作为输入，输出可部署静态的文件(HTML, CSS, JavaScript)。不涉及服务器端语言和数据库。这样的静态站点速度更快、更加可靠、更便宜甚至免费并且很好部署和版本管理。由于网站没有服务器端语言和数据库的参与，因此网站也更加安全。
 
+我的博客[冯兄话吉](https://fengmengzhao.github.io/ "冯兄话吉")就是基于Jekyll做的，托管在GitHub上。
+
+![冯兄话吉](/assets/images/articles/fengmengzhao-blog.png "冯兄话吉")
+
 Jekyll、Hugo、GitBook和Pelican是现在比较流行的静态博客生成器。你也可以访问[StaticGen](https://www.staticgen.com/ "StaticGen")，发现更多的开源静态网站生成器。
 
 ## Motion UI
