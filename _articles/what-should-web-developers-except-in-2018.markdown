@@ -36,7 +36,7 @@ Progressive Web App最大的一个优点在于它的可靠性。在后台增加�
 
 现在来说，内容管理系统(content management System)领域是动态网站的天下。然而，互联网刚刚出现的第一个站点是静态的。现在，在静态网站生成器的帮助下，静态网站又回来的，这是一种混合式的Web开发方式。[Jekyll](https://jekyllrb.com/ "Jekyll")是目前最流行的静态网站生成器之一。
 
-![Jekyll静态网站生成器](/articles/images/articles/jekyll-website.png "Jekyll静态网站生成器")
+![Jekyll静态网站生成器](/assets/images/articles/jekyll-website.png "Jekyll静态网站生成器")
 
 静态网站生成器或者静态网站引擎把动态的内容和数据作为输入，输出可部署静态的文件(HTML, CSS, JavaScript)。不涉及服务器端语言和数据库。这样的静态站点速度更快、更加可靠、更便宜甚至免费并且很好部署和版本管理。由于网站没有服务器端语言和数据库的参与，因此网站也更加安全。
 
